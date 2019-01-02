@@ -1,0 +1,485 @@
+/* Global */
+body{
+    font: 1rem/1.2/'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: gainsboro;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1), -30px 0px 40px rgba(0,0,0,0.1);
+}
+
+.container{
+    overflow: hidden;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1,h2,h3,ul{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    text-align: center;
+    margin:2rem 0 0;
+    background: rgb(161, 24, 24);
+    transition: backgroud 500ms ease;
+    color: white;
+}
+.btn:hover{
+    background: gainsboro;
+}
+.dark{
+    padding: 1.5rem;
+    text-align: center;
+    background: black;
+    color:white;
+}
+
+.dotted-border{
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display:inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Main header */
+#homepage-header{
+    padding-left: 30px;
+    padding-right: 20px;
+    min-height: 5rem;
+    background-color: rgb(161, 24, 24);
+    color: white;
+    border-bottom: black 3px solid;
+    padding-top: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+#homepage-header #branding{
+    float: left;
+}
+
+#homepage-header #branding h1{
+    font-size: 3rem;
+    padding-top: 5px;
+}
+#homepage-header nav{
+    float: right; 
+    margin-top: 30px;   
+}
+
+#homepage-header li{
+    display: inline;
+    padding: 15px;
+}    
+
+#homepage-header a{
+    color:  white;
+    font-size: 1.05rem;
+}
+
+#homepage-header a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+#homepage-header .current a{
+    color: black;
+}
+
+/* Showcase */
+#showcase{
+    min-height: 400px;
+    background: url('/img/woman-raising-hand.jpg') no-repeat;
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#showcase p{
+    font-size: 23px;
+}
+               
+.box {
+    position: relative;
+  }
+  
+  /* Bottom right text */
+  .topic-block {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10%;
+  }
+
+#boxes .box img{
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+
+#boxes .box{
+    float: left;
+    width: 33%;
+    padding: 0.15%;
+    text-align: center;
+    height: 40vh;   
+}
+#meetup .container{
+    background: white;
+}
+.show-more .btn{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Footer*/
+footer{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    background: black;
+    color: white;
+    height: 10rem;
+}
+.social{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+
+.socialmedia-img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px; 
+    
+}
+
+/* Media queries */
+@media(max-width: 700px){
+    header #branding, header nav, #boxes .box{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    section .border{
+        width: 95%;
+    }
+}
+
+.heading-title{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+.border{
+    width: 50%;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 10px;
+    background: white;
+}
+.border h1{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 1.5rem;
+    
+}
+
+.border p{
+    padding-bottom: 1.5rem;
+}
+
+.border .btn{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+input, textarea{
+    width: 100%;
+    padding: 15px 0px;
+    margin: 9px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#forgot-password-ptag{
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 10px
+}
+
+.meetup-img{
+    background: url("/img/andela.png"), no-repeat;
+    min-height: 300px;
+    color:white;
+    font-size: 1rem;
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+.box-in-image{
+    display: block;
+    float: left;
+    background: #ccc;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+    padding:0.3%;
+}
+.box-in-image .btn{
+    width: 100%;
+    margin-top: 10px;
+    padding: 1rem 0rem;
+}
+#attending-number{
+    padding: 10px;
+    color: black;
+}
+.attending{
+    color: black;
+}
+.meetup-details{
+    width: 49%;
+    float: left;
+    padding-left: 1%;
+    background: white;
+    min-height: 300px;
+}
+.click-to-ask .btn, .click-to-delete .btn{
+    margin:2rem 40% 0;
+    text-align: center;
+}
+.click-to-ask a, .click-to-delete .btn a{
+    color: white;
+}
+
+header h3{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.small-pic img{
+    width: 70px;
+    height: 70px;
+    padding-left: 0.5rem;
+    float: left;
+    padding-right: 20px;
+}
+
+.pic-question-and-comment{
+    width: 70%;
+    margin-left: 20%
+
+}
+.question-section{
+    min-height: 400px;
+}
+
+.question-section .container{
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1.5rem;
+}
+
+.vote{
+    width:100px; 
+    border: 2px solid,#ccc;
+    background: white;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+.vote p{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-right: 6px;
+}
+.vote img, .division img{
+    width: 40px;
+    padding: 3px;
+}
+
+.question{
+    margin-bottom: 15px;
+}
+.upvote{
+    float: left; 
+}
+.tiny-pic img{
+    width: 50px;
+    width: 50px;
+    padding-left: 0.5rem;
+    float: left;
+    padding-right: 20px;
+}
+#view-comments .container{
+    padding-top: 10px;
+    padding-left: 90px;
+    border: none;  
+}
+.write-comment{
+    padding-left: 100px;
+    border:none;
+}
+.write-comment .btn{
+    margin-top: 0px;
+}
+.post-question-area{
+    width:50%;
+    margin:auto;
+}
+.post-question-area textarea{
+    min-height: 100px;
+}
+.show-more-questions{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.post-question-area .btn{
+    margin:0px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 700px){
+    .meetup-img, .meetup-details{
+        width: 100%;
+        float: none;
+    }
+    .meetup-details{
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    main,{
+        width: 100%;
+    }
+    .vote{
+        margin-left: 0;
+    }
+}
+section #profile-head{
+    margin-bottom: 10px;
+}
+
+.division h3{
+    border: none;
+}
+.division{
+    width: 100%;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 0;
+}
+.division .heading-title{
+        font-size: 1rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        
+}
+.division .top-topic{
+    border: none;
+}
+.top-topic{
+    padding-top: 20px;
+}
+
+.top-topic .upvote{
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    text-align: left
+}
+
+.top-topic .question{
+    width: 50%;
+    padding-right: 20px;
+    float: left;
+    text-align: left;
+}
+
+.container-profile{
+    width: 85%;
+    margin:auto;
+}
+.profile-picture{
+    width: 18%;
+    float: left;
+    min-height: 200px;
+}
+.profile-details{
+    width: 79%;
+    padding-left: 1%;
+    float: left;   
+}
+.about-label, .name-label{
+    display: block;
+    width: 13%;
+    float: left;
+}
+.about, .name{
+    width: 75%;
+    float: left;
+    margin-right: 20px;
+}
+.change-pix{
+clear: both;
+}
+.change-pix, .reset-pass, .container-about{
+    padding-top: 15px;
+}
+.update{
+    margin-top: 10px;
+}
+
+.delete h4{
+    float: left;
+}
+
+.click-to-delete .btn{
+    margin-bottom: 20px;
+}
+.upvotes-number{
+    margin-left: 15px;
+    font-weight: bold;
+}
