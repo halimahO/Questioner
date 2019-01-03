@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questioner | Meetup | Aspiring Andelans</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body> 
+    <!-- Homepage header -->
+    <header id="homepage-header"> 
+        <div class="container">
+            <div id="branding">
+                <a href="index.html"><h1>Questioner</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="delete-meetup.html">Delete meetup</a></li>
+                    <li><a href="new-meetup.html">New meetup</a></li>
+                    <li><a href="index.html#meetup">Meetup</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="sign-up.html">Sign up</a></li>
+                    <li><a href="profile.html">Hi, Guest</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main area -->
+    <main>
+       <section>
+            <div class="heading-title">
+                <h1>Aspiring Andelans</h1>
+            </div>
+            <div class="container">
+                <div class="meetup-img">
+                    <div class="box-in-image">
+                         <h1 id="attending-number" class="not-clicked">2</h1>
+                         <div class="attending">Attending</div>
+                         <button class="btn" onclick="attend()">Click to Attend</button>
+                    </div>
+                </div>
+                <div class="meetup-details">
+                    <div class="meetup-topic">
+                         <h1>Aspiring Andelans</h1>
+                    </div>
+                    <div class="meetup-description">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, ipsum assumenda consequuntur unde nisi pariatur soluta cum aut! Perferendis, alias.</p>
+                    </div>
+                    <div class="meetup-tag">
+                        <h3>Tags:</h3>
+                        <span>Lorem ipsum dolor sit amet.</span> <br> <br>
+                    </div>
+                    <div class="meetup-date">
+                        <h3>Date:</h3>
+                        <span>10/2/2018</span> <br> <br>
+                    </div>
+                    <div class="meetuptime">
+                        <h3>Time:</h3>
+                        <span>10:30AM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <div class="click-to-ask"> 
+                    <div class="btn"><a href="#post-question">Click to ask questions</a></div> 
+                </div>
+        <section class="question-section">
+            <header class="heading-title">
+                <h3><span id="question-number">1</span> Questions</h3>
+            </header>
+            <div class="question-area">
+                <div class="container">
+                <div class="vote">
+                    <p>Click to vote</p> 
+                    <div class="upvote">
+                        <div><a href="#upVote"><img id="upvote-img" class="not-clicked" src="/img/upvote-gray.jpg" alt="upVote" onclick="upvote()"></a></div>   
+                        <div id="upvotes-number" >2</div> 
+                    </div>
+                    <div class="downvote">
+                        <div><a href="#downVote"><img id="downvote-img" class="not-clicked" src="/img/downvote-gray.jpg" alt="downvote" onclick="downvote()"></a></div>   
+                        <div id="downvotes-number">2</div>
+                    </div>
+                </div>
+                <div class="pic-question-and-comment">
+                    <div class="small-pic"><img src="/img/halimah.jpg" alt="name"></div>
+                        <div class="question-and-comment">
+                            <div class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eius, vitae quo ipsa iure placeat?</div>
+                            <div class="comments"> 
+                                <h3 onclick="toggleHideAndShowComment()"><a href="#comments"><span class="comment-number">1 </span>Comments</a></h3> 
+                                <div id="view-comments">
+                                    <div class="container">
+                                        <div class="tiny-pic"><img src="/img/halimah.jpg" alt="name"></div>
+                                        <div class="comment-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eius, vitae quo ipsa iure placeat?</div>   
+                                    </div>
+                                </div>
+                                <div class="write-comment">
+                                    <div><textarea id="comment-text", placeholder="Write comment"></textarea></div> 
+                                    <button class="btn">Post</button>
+                                </div>
+                            </div>
+                        </div>      
+                </div>
+            </div>
+                <div class="show-more-questions">
+                    <h3><a href="#show-more">Load more questions</a></h3> 
+                </div>
+            
+            </div>  
+       </section>
+       <div class="post-question-area">
+            <h3>Post a question</h3>
+            <div><textarea id="post-question", placeholder="Type questions here"></textarea></div> 
+            <button class="btn">Post</button>
+        </div>
+    </main>
+
+    <!-- Footer area -->
+    <footer>
+        <h3>Follow Us</h3>
+        <div class="social">
+            <div class="socialmedia-img">
+                <a href="https://facebook.com/"><img src="img/fb.png" alt="facebook"></a>
+            </div>
+            <div class="socialmedia-img">
+                <a href="https://twitter.com/"><img src="img/twitter.png" alt="twitter"></a>
+            </div>
+            <div class="socialmedia-img">
+                <a href="https://instagram.com/"><img src="img/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <p>Questioner, copyright &copy; 2018</p>
+        
+    </footer>
+</body>
+</html>
