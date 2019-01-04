@@ -21,6 +21,26 @@ const Question = {
     });
   },
 
+  // Controller for upvote a question
+  upvote(req, res) {
+    const question = questionModel.fetchOneQuestion(req.params.id);
+    if (!question) {
+      return res.status(404).send({
+        message: 'Question not found',
+      });
+    }
+    const questionVote = questionModel.upvote(req.params.id);
+    return res.status(200).send({
+      status: 200,
+      data: [{
+        meetup: questionVote.meetup,
+        title: questionVote.title,
+        body: questionVote.body,
+        votes: questionVote.votes,
+
+      }],
+    });
+  },
 };
 
 export default Question;
