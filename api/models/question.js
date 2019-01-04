@@ -25,6 +25,19 @@ class Question {
     this.questions.push(newQuestion);
     return newQuestion;
   }
+
+  fetchOneQuestion(id) {
+    // eslint-disable-next-line eqeqeq
+    return this.questions.find(data => data.id == id);
+  }
+
+  // Model for upvote a question
+  upvote(id) {
+    const question = this.fetchOneQuestion(id);
+    const index = this.questions.indexOf(question);
+    this.questions[index].votes += 1;
+    return this.questions[index];
+  }
 }
 
 export default new Question();
