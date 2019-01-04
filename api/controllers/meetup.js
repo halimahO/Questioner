@@ -1,8 +1,8 @@
 import moment from 'moment';
 import meetupModel from '../models/meetup';
 
-const Meetup = {
 // Controller for create a meetup record
+const Meetup = {
   createMeetup(req, res) {
     if (!req.body.location || !req.body.topic || !req.body.happeningOn) {
       return res.status(400).send({
