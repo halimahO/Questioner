@@ -36,6 +36,11 @@ class Meetup {
   fetchAllMeetup() {
     return this.meetups;
   }
+
+  // Model for fetch all upcoming meetup records
+  getUpcoming() {
+    return this.meetups.filter(data => data.happeningOn >= moment().format('LLLL'));
+  }
 }
 
 export default new Meetup();
