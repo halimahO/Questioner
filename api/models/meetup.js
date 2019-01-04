@@ -6,7 +6,6 @@ class Meetup {
   }
 
   // Model for create a meetup record
-
   createMeetup(data) {
     const newId = (array) => {
       if (array.length > 0) {
@@ -25,6 +24,12 @@ class Meetup {
     };
     this.meetups.push(newMeetup);
     return newMeetup;
+  }
+
+  // Model for fetch a specific meetup record
+  fetchOneMeetup(id) {
+    // eslint-disable-next-line eqeqeq
+    return this.meetups.find(data => data.id == id);
   }
 }
 
