@@ -8,34 +8,6 @@ const { describe, it } = require('mocha');
 chai.use(chaiHttp);
 chai.should();
 
-const meetups = [
-  {
-    id: 1,
-    topic: 'topic',
-    createdOn: 24,
-    location: 'topic',
-    happeningOn: 24,
-  },
-  {
-    id: 2,
-    topic: 'topic',
-    createdOn: 24,
-    location: 'topic',
-    happeningOn: 24,
-  },
-  {
-    topic: 'topic',
-    createdOn: 24,
-    location: 'topic',
-    happeningOn: 24,
-  },
-];
-
-meetups.id = 1;
-meetups.topic = 'hg';
-meetups.happeningOn = '';
-meetups.location = 'lop';
-
 describe('Test for meetup resource', () => {
   describe('POST /meetups', () => {
     it('should create an meetup record', (done) => {
