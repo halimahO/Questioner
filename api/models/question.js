@@ -38,6 +38,14 @@ class Question {
     this.questions[index].votes += 1;
     return this.questions[index];
   }
+
+  // Model for downvote a question
+  downvote(id) {
+    const question = this.fetchOneQuestion(id);
+    const index = this.questions.indexOf(question);
+    this.questions[index].votes -= 1;
+    return this.questions[index];
+  }
 }
 
 export default new Question();
