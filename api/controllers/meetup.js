@@ -25,6 +25,25 @@ const Meetup = {
       }],
     });
   },
+
+  getOneMeetup(req, res) {
+    const meetup = meetupModel.fetchOneMeetup(req.params.id);
+    if (!meetup) {
+      return res.status(404).send({
+        message: 'Meetup not found',
+      });
+    }
+    return res.status(200).send({
+      status: 200,
+      data: [{
+        id: meetup.id,
+        topic: meetup.topic,
+        location: meetup.location,
+        happeningOn: meetup.happeningOn,
+        tags: meetup.tags,
+      }],
+    });
+  },
 };
 
 export default Meetup;
