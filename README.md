@@ -14,11 +14,11 @@ User Interface
 
 * HTML
 * CSS
+* Javascript
 
 Backend
 
-* Javascript
-* Node.js/
+* Node.js/Express
 
 Testing Framework
 
