@@ -31,6 +31,11 @@ class Meetup {
     // eslint-disable-next-line eqeqeq
     return this.meetups.find(data => data.id == id);
   }
+
+  // Model for fetch all meetup records
+  fetchAllMeetup() {
+    return this.meetups;
+  }
 }
 
 export default new Meetup();
