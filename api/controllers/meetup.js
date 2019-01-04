@@ -25,7 +25,7 @@ const Meetup = {
       }],
     });
   },
-
+  // Controller for fetch a specific meetup record
   getOneMeetup(req, res) {
     const meetup = meetupModel.fetchOneMeetup(req.params.id);
     if (!meetup) {
@@ -42,6 +42,14 @@ const Meetup = {
         happeningOn: meetup.happeningOn,
         tags: meetup.tags,
       }],
+    });
+  },
+  // Controller for fetch all meetup records
+  getAllMeetup(req, res) {
+    const meetup = meetupModel.fetchAllMeetup();
+    return res.status(200).send({
+      status: 200,
+      data: meetup,
     });
   },
 };
