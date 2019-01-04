@@ -52,6 +52,18 @@ const Meetup = {
       data: meetup,
     });
   },
+  getUpcoming(req, res) {
+    const upcoming = meetupModel.getUpcoming();
+    if (upcoming.length === 0 || upcoming === undefined) {
+      return res.status(404).send({
+        message: 'No upcoming meetup',
+      });
+    }
+    return res.status(200).send({
+      status: 200,
+      data: upcoming,
+    });
+  },
 };
 
 export default Meetup;
