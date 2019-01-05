@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha mocha test/**/*.js --require babel-register --reporter spec || exit 0",
     "build": "babel server.js --out-dir build",
-    "start": "babel-watch server.js"
+    "dev-start": "babel-watch server.js",
+    "start": "node server.js" 
   },
   "author": "Halimah Oladosu",
   "license": "ISC",
