@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "node api for questioner",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "mocha mocha test/**/*.js --require babel-register --reporter spec || exit 0",
     "build": "babel server.js --out-dir build",
