@@ -1,7 +1,7 @@
 web:node server.js
 
 "scripts": {
-    "start": "node server.js"
+    "start": "node build/server.js"
 }
 "engines": {
     "node": "8.9.3"
