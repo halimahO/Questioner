@@ -5,7 +5,7 @@ import routes from './routes/index';
 const app = express();
 
 // Set the port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Configure app to use json format
 app.use(express.json());
