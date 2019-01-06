@@ -33,3 +33,4 @@ app.listen(port, function () {
 
 // Export app for testing purpose
 exports.default = app;
+//# sourceMappingURL=server.js.map

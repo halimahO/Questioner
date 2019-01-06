@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha mocha test/**/*.js --require babel-register --reporter spec || exit 0",
-    "build": "babel server.js --out-dir build",
-    "dev-start": "babel-watch server.js",
-    "start": "node ./build/server.js" 
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./api -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/server.js"
   },
   "author": "Halimah Oladosu",
   "license": "ISC",
