@@ -5,8 +5,7 @@ import routes from './routes/index';
 const app = express();
 
 // Set the port
-const host = '0,0,0,0';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // Configure app to use json format
 app.use(express.json());
@@ -15,7 +14,7 @@ app.use(express.json());
 app.use('/', routes);
 
 // Start the server
-app.listen(port, host, () => {
+app.listen(port, () => {
   console.log(`Sever running on port ${port}`);
 });
 
