@@ -204,6 +204,12 @@ section{
 form{
     padding: 40px;
 }
+.heading-title{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
 .sign-up-heading-title{
     font-size: 2rem;
     text-align: center;
@@ -214,15 +220,16 @@ form{
 .sign-up-heading-description{
     text-align: center;
     padding-left: 30px;
-}xt box
-.heading-title{
+}
+
+.heading-title-login{
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
     padding-top: 30px;
     padding-right: 100px;
 }
-.heading-description{
+.heading-description-login{
     text-align: center;
     padding-left: 43px;
 }
