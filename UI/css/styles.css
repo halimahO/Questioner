@@ -204,6 +204,17 @@ section{
 form{
     padding: 40px;
 }
+.sign-up-heading-title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+.sign-up-heading-description{
+    text-align: center;
+    padding-left: 30px;
+}xt box
 .heading-title{
     font-size: 2rem;
     text-align: center;
