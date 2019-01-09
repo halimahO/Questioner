@@ -106,7 +106,7 @@ a{
 /* Showcase */
 #showcase{
     min-height: 400px;
-    background: url('/img/woman-raising-hand.jpg') no-repeat;
+    background: url('/UI/img/woman-raising-hand.jpg') no-repeat;
     text-align: center;
     color: black;
     margin-top: 5px;
@@ -278,7 +278,7 @@ input, textarea{
 }
 
 .meetup-img{
-    background: url("/img/andela.png"), no-repeat;
+    background: url(../img/andela.png), no-repeat;
     min-height: 300px;
     color:white;
     font-size: 1rem;
