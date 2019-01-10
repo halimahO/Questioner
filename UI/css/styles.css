@@ -164,7 +164,7 @@ a{
    
     margin-bottom: 20px;
 }
-#meetup{
+.padding-bot, #meetup{
     padding-bottom: 100px;
 }
 /* Footer*/
@@ -331,8 +331,8 @@ header h3{
 }
 
 .small-pic img{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     float: left;
 }
@@ -376,19 +376,19 @@ header h3{
     padding: 3px;
 }
 
-.question{
+.m-question{
     margin-bottom: 15px;
-    margin-left: 90px;
+    margin-left: 85px;
     margin-top: 10px;
 }
 .comment-content{
-    margin-left: 70px;
+    margin-left: 65px;
 }
 .question-title h3{
-    margin-left: 87px;
+    margin-left: 82px;
 }
 .comments h3{
-    margin-left: 90px;
+    margin-left: 85px;
 }
 .upvote{
     float: left; 
@@ -400,6 +400,7 @@ header h3{
     float: left;
 }
 #view-comments .container{
+    max-width: 100%;
     padding-top: 10px;
     padding-left: 90px;
     border: none;  
@@ -450,26 +451,19 @@ section #profile-head{
     margin-bottom: 10px;
 }
 
-.division h3{
-    border: none;
-}
+
 .division{
-    width: 100%;
-    border: 1px solid #ccc;
+    width: 80%;
+    margin: auto;
     text-align: center;
-    padding: 0;
+    padding: 10px;;
 }
 .division .heading-title{
         font-size: 1rem;
         padding: 0.5rem;
         font-weight: bold;
+        margin-top: 40px;
         
-}
-.division .top-topic{
-    border: none;
-}
-.top-topic{
-    padding-top: 20px;
 }
 
 .top-topic .upvote{
@@ -480,10 +474,15 @@ section #profile-head{
 }
 
 .top-topic .question{
-    width: 50%;
-    padding-right: 20px;
+    width: 60%;
+    padding-right: 10px;
     float: left;
     text-align: left;
+}
+
+#pix-details {
+    width: 85%;
+    margin: auto;
 }
 
 .container-profile{
@@ -495,9 +494,18 @@ section #profile-head{
     float: left;
     min-height: 200px;
 }
+.profile-pix img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.profile-pix img:hover{
+    opacity: 0.3;
+}
 .profile-details{
-    width: 79%;
-    padding-left: 1%;
+    width: 77%;
+    padding-left: 5%;
     float: left;   
 }
 .about-label, .name-label{
@@ -510,16 +518,10 @@ section #profile-head{
     float: left;
     margin-right: 20px;
 }
-.change-pix{
-clear: both;
-}
-.change-pix, .reset-pass, .container-about{
+
+.container-about{
     padding-top: 15px;
 }
-.update{
-    margin-top: 10px;
-}
-
 .delete h4{
     float: left;
 }
@@ -530,4 +532,20 @@ clear: both;
 .upvotes-number{
     margin-left: 15px;
     font-weight: bold;
+}
+#summary-section, #summary-section-comment, #summary-section-upcoming{
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.top-topic .question p {
+    margin-top: 0;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+.top-topic h3{
+    padding-bottom: 20px;
+    color: rgb(161, 24, 24);
+    text-align: center;
 }
