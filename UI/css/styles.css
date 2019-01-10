@@ -19,6 +19,7 @@ main{
 img{
     display: block;
     width: 100%;
+
 }
 
 h1,h2,h3,ul{
@@ -325,7 +326,11 @@ input, textarea{
 .click-to-ask a, .click-to-delete .btn a{
     color: white;
 }
+textarea{
+    resize: none;
+}
 
+h1
 header h3{
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
