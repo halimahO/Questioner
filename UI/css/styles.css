@@ -105,7 +105,7 @@ a{
 /* Showcase */
 #showcase{
     min-height: 87vh;
-    background: url("/UI/img/woman-raising-hand.jpg") no-repeat;
+    background: url("../img/woman-raising-hand.jpg") no-repeat;
     background-size: auto;
     text-align: center;
     color: black;
