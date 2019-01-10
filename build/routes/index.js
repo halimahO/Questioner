@@ -22,6 +22,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var routes = (0, _express.Router)();
 
+routes.get('/', function () {
+  return 'Welcome, please use /api/v1/meetups to get meetups';
+});
+routes.get('/api/v1', function () {
+  return 'Welcome, please use /api/v1/meetups to get meetups';
+});
 routes.post('/api/v1/meetups', _meetup2.default.createMeetup);
 routes.get('/api/v1/meetups/upcoming', _meetup2.default.getUpcoming);
 routes.get('/api/v1/meetups/:id', _meetup2.default.getOneMeetup);

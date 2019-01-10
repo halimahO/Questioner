@@ -9,7 +9,8 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./api -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/server.js"
+    "start": "npm run build && node ./build/server.js",
+    "dev-start": "babel-watch ./api/server.js"
   },
   "author": "Halimah Oladosu",
   "license": "ISC",
