@@ -28,17 +28,13 @@
 
     <!-- Main area -->
     <main>
-       <section>
+       <section id="meetup-section">
             <div class="heading-title">
                 <h1>Aspiring Andelans</h1>
             </div>
             <div class="container">
                 <div class="meetup-img">
-                    <div class="box-in-image">
-                         <h1 id="attending-number" class="not-clicked">2</h1>
-                         <div class="attending">Attending</div>
-                         <button class="btn" onclick="attend()">Click to Attend</button>
-                    </div>
+                   <img src="./img/andela.png" alt="Andela logo">
                 </div>
                 <div class="meetup-details">
                     <div class="meetup-topic">
@@ -62,13 +58,16 @@
                 </div>
             </div>
         </section>
-                <div class="click-to-ask"> 
-                    <div class="btn"><a href="#post-question">Click to ask questions</a></div> 
-                </div>
+        <div class= "rsvp-ask">
+            <button class="btn">Click to Rsvp </button>
+            <button class="btn"><a href="#post-question">Click to ask question</a></button> 
+        </div>
         <section class="question-section">
+            <div class="container">
             <header class="heading-title">
-                <h3><span id="question-number">1</span> Questions</h3>
+                <h3>Questions: <span id="question-number">1</span> </h3>
             </header>
+        </div>
             <div class="question-area">
                 <div class="container">
                 <div class="vote">
@@ -87,7 +86,7 @@
                         <div class="question-and-comment">
                             <div class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eius, vitae quo ipsa iure placeat?</div>
                             <div class="comments"> 
-                                <h3 onclick="toggleHideAndShowComment()"><a href="#comments"><span class="comment-number">1 </span>Comments</a></h3> 
+                                <h3 onclick="toggleHideAndShowComment()"><a href="#comments">Comments: <span class="comment-number">1 </span></a></h3> 
                                 <div id="view-comments">
                                     <div class="container">
                                         <div class="tiny-pic"><img src="./img/halimah.jpg" alt="name"></div>
