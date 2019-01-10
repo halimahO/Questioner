@@ -1,0 +1,551 @@
+/* Global */
+body{
+    font: 1rem/1.2/'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: gainsboro;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1), -30px 0px 40px rgba(0,0,0,0.1);
+}
+
+.container{
+    overflow: hidden;
+}
+
+img{
+    display: block;
+    width: 100%;
+
+}
+
+h1,h2,h3,ul{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    text-align: center;
+    margin:2rem 0 0;
+    background: rgb(161, 24, 24);
+    transition: backgroud 500ms ease;
+    color: white;
+}
+.btn:hover{
+    font-weight: bold;
+}
+.dark{
+    padding: 1.5rem;
+    text-align: center;
+    background: black;
+    color:white;
+}
+
+.dotted-border{
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display:inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Main header */
+#homepage-header{
+    padding-left: 30px;
+    padding-right: 20px;
+    min-height: 5rem;
+    background-color: rgb(161, 24, 24);
+    color: white;
+    border-bottom: black 3px solid;
+    padding-top: 1px;
+    margin-top: 5px;
+}
+
+#homepage-header #branding{
+    float: left;
+}
+
+#homepage-header #branding h1{
+    font-size: 3rem;
+    padding-top: 5px;
+}
+#homepage-header nav{
+    float: right; 
+    margin-top: 30px;   
+}
+
+#homepage-header li{
+    display: inline;
+    padding: 15px;
+}    
+
+#homepage-header a{
+    color:  white;
+    font-size: 1.05rem;
+}
+
+#homepage-header a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+#homepage-header .current a{
+    color: black;
+}
+
+/* Showcase */
+#showcase{
+    min-height: 87vh;
+    background: url('/UI/img/woman-raising-hand.jpg') no-repeat;
+    background-size: auto;
+    text-align: center;
+    color: black;
+}
+
+#showcase h1{
+    margin-top: 50px;
+    font-size: 60px;
+    margin-bottom: 10px;
+    -webkit-text-stroke: 1px rgb(230, 220, 220);
+}
+
+#showcase p{
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+    
+}
+               
+.box {
+    position: relative;
+  }
+  
+  /* Bottom right text */
+  .topic-block {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10%;
+  }
+
+#boxes .box img{
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+
+#boxes .box{
+    float: left;
+    width: 33%;
+    padding: 0.15%;
+    text-align: center;
+    height: 40vh;   
+}
+#meetup .container{
+    background: white;
+}
+.show-more .container{
+    width: 100%;
+    text-align: center;
+}
+.show-more .btn{
+   
+    margin-bottom: 20px;
+}
+.padding-bot, #meetup{
+    padding-bottom: 100px;
+}
+/* Footer*/
+footer{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    background: black;
+    color: white;
+    height: 10rem;
+}
+.social{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+
+.socialmedia-img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px; 
+    
+}
+
+/* Media queries */
+@media(max-width: 700px){
+    header #branding, header nav, #boxes .box{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    section .border{
+        width: 95%;
+    }
+}
+
+form{
+    padding: 40px;
+}
+.heading-title{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+.sign-up-heading-title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+.sign-up-heading-description{
+    text-align: center;
+    padding-left: 30px;
+}
+
+.heading-title-login{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 100px;
+}
+.heading-description-login{
+    text-align: center;
+    padding-left: 43px;
+}
+
+.border{
+    width: 60vh;
+    margin: auto;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 5px;
+
+}
+
+.border h1{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 1.5rem;
+    
+}
+
+.border p{
+    padding-bottom: 1.5rem;
+}
+
+.border .btn{
+    margin-top:20px;
+}
+input, textarea{
+    width: 100%;
+    padding: 15px 5px;
+    margin: 9px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#password-label{
+    margin-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#forgot-password-ptag{
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.meetup-img{
+    min-height: 300px;
+    width: 40%;
+    float: left;
+}
+.meetup-img img{
+    width: 100%;
+    min-height: 300px;
+    
+}
+
+.meetup-details{
+    width: 59%;
+    float: left;
+    padding-left: 1%;
+    background: white;
+    min-height: 300px;
+}
+.meetup-topic {
+    padding-top: 10px;
+}
+#meetup-section {
+    padding-bottom: 10px;
+}.question-section .heading-title{
+    padding: 0;
+    padding-left: 20px;
+}
+.rsvp-ask{
+    width: 100%;
+   text-align: center;
+}
+
+.click-to-ask .btn, .click-to-delete .btn{
+    margin:2rem 40% 0;
+}
+.rsvp-ask a, .click-to-delete .btn a{
+    color: white;
+}
+textarea{
+    resize: none;
+}
+
+h1
+header h3{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.small-pic img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    float: left;
+}
+
+.pic-question-and-comment{
+    width: 70%;
+    margin-left: 20%
+
+}
+.question-section{
+    min-height: 400px;
+}
+
+.question-section .container{
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1.5rem;
+    padding-top: 15px;
+}
+
+.vote{
+    width:100px; 
+    border: 2px solid,#ccc;
+    background: white;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+.vote p{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-right: 6px;
+}
+.vote img, .division img{
+    width: 40px;
+    padding: 3px;
+}
+
+.m-question{
+    margin-bottom: 15px;
+    margin-left: 85px;
+    margin-top: 10px;
+}
+.comment-content{
+    margin-left: 65px;
+}
+.question-title h3{
+    margin-left: 82px;
+}
+.comments h3{
+    margin-left: 85px;
+}
+.upvote{
+    float: left; 
+}
+.tiny-pic img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+}
+#view-comments .container{
+    max-width: 100%;
+    padding-top: 10px;
+    padding-left: 90px;
+    border: none;  
+}
+.write-comment{
+    padding-left: 100px;
+    border:none;
+}
+.write-comment .btn{
+    margin-top: 0px;
+}
+.post-question-area{
+    width:50%;
+    margin:auto;
+}
+.post-question-area textarea{
+    min-height: 100px;
+}
+.show-more-questions{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.post-question-area .btn{
+    margin:0px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 700px){
+    .meetup-img, .meetup-details{
+        width: 100%;
+        float: none;
+    }
+    .meetup-details{
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    main,{
+        width: 100%;
+    }
+    .vote{
+        margin-left: 0;
+    }
+}
+section #profile-head{
+    margin-bottom: 10px;
+}
+
+
+.division{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;;
+}
+.division .heading-title{
+        font-size: 1rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        margin-top: 40px;
+        
+}
+
+.top-topic .upvote{
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    text-align: left
+}
+
+.top-topic .question{
+    width: 60%;
+    padding-right: 10px;
+    float: left;
+    text-align: left;
+}
+
+#pix-details {
+    width: 85%;
+    margin: auto;
+}
+
+.container-profile{
+    width: 85%;
+    margin:auto;
+}
+.profile-picture{
+    width: 18%;
+    float: left;
+    min-height: 200px;
+}
+.profile-pix img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.profile-pix img:hover{
+    opacity: 0.3;
+}
+.profile-details{
+    width: 77%;
+    padding-left: 5%;
+    float: left;   
+}
+.about-label, .name-label{
+    display: block;
+    width: 13%;
+    float: left;
+}
+.about, .name{
+    width: 75%;
+    float: left;
+    margin-right: 20px;
+}
+
+.container-about{
+    padding-top: 15px;
+}
+.delete h4{
+    float: left;
+}
+
+.click-to-delete .btn{
+    margin-bottom: 20px;
+}
+.upvotes-number{
+    margin-left: 15px;
+    font-weight: bold;
+}
+#summary-section, #summary-section-comment, #summary-section-upcoming{
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.top-topic .question p {
+    margin-top: 0;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+.top-topic h3{
+    padding-bottom: 20px;
+    color: rgb(161, 24, 24);
+    text-align: center;
+}
