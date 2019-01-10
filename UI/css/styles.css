@@ -333,9 +333,8 @@ header h3{
 .small-pic img{
     width: 70px;
     height: 70px;
-    padding-left: 0.5rem;
+    border-radius: 50%;
     float: left;
-    padding-right: 20px;
 }
 
 .pic-question-and-comment{
@@ -379,16 +378,26 @@ header h3{
 
 .question{
     margin-bottom: 15px;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+.comment-content{
+    margin-left: 70px;
+}
+.question-title h3{
+    margin-left: 87px;
+}
+.comments h3{
+    margin-left: 90px;
 }
 .upvote{
     float: left; 
 }
 .tiny-pic img{
     width: 50px;
-    width: 50px;
-    padding-left: 0.5rem;
+    height: 50px;
+    border-radius: 50%;
     float: left;
-    padding-right: 20px;
 }
 #view-comments .container{
     padding-top: 10px;
