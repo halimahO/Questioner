@@ -19,6 +19,7 @@ main{
 img{
     display: block;
     width: 100%;
+
 }
 
 h1,h2,h3,ul{
@@ -40,7 +41,7 @@ a{
     color: white;
 }
 .btn:hover{
-    background: gainsboro;
+    font-weight: bold;
 }
 .dark{
     padding: 1.5rem;
@@ -67,8 +68,6 @@ a{
     border-bottom: black 3px solid;
     padding-top: 1px;
     margin-top: 5px;
-    margin-bottom: 5px;
-
 }
 
 #homepage-header #branding{
@@ -105,22 +104,25 @@ a{
 
 /* Showcase */
 #showcase{
-    min-height: 400px;
-    background: url('/img/woman-raising-hand.jpg') no-repeat;
+    min-height: 87vh;
+    background: url("../img/woman-raising-hand.jpg") no-repeat;
+    background-size: auto;
     text-align: center;
     color: black;
-    margin-top: 5px;
 }
 
 #showcase h1{
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 60px;
     margin-bottom: 10px;
-    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(230, 220, 220);
 }
 
 #showcase p{
-    font-size: 23px;
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+    
 }
                
 .box {
@@ -154,11 +156,17 @@ a{
 #meetup .container{
     background: white;
 }
-.show-more .btn{
+.show-more .container{
     width: 100%;
+    text-align: center;
+}
+.show-more .btn{
+   
     margin-bottom: 20px;
 }
-
+.padding-bot, #meetup{
+    padding-bottom: 100px;
+}
 /* Footer*/
 footer{
     text-align: center;
@@ -198,21 +206,48 @@ footer{
     }
 }
 
+form{
+    padding: 40px;
+}
 .heading-title{
     font-size: 1.5rem;
     padding: 1.5rem;
     font-weight: bold;
     padding-bottom: 1.5rem;
 }
+.sign-up-heading-title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+.sign-up-heading-description{
+    text-align: center;
+    padding-left: 30px;
+}
+
+.heading-title-login{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 100px;
+}
+.heading-description-login{
+    text-align: center;
+    padding-left: 43px;
+}
 
 .border{
-    width: 50%;
+    width: 60vh;
     margin: auto;
     border: 1px solid #ccc;
-    padding: 8px;
-    margin-bottom: 10px;
     background: white;
+    border-radius: 5px;
+
 }
+
 .border h1{
     font-size: 2rem;
     font-weight: bold;
@@ -226,78 +261,80 @@ footer{
 
 .border .btn{
     margin-top:20px;
-    margin-bottom:10px;
 }
 input, textarea{
     width: 100%;
-    padding: 15px 0px;
+    padding: 15px 5px;
     margin: 9px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
+#password-label{
+    margin-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
 
 #forgot-password-ptag{
     padding: 0;
     margin-top: 5px;
-    margin-bottom: 10px
+    margin-bottom: 0px;
 }
 
 .meetup-img{
-    background: url("/img/andela.png"), no-repeat;
     min-height: 300px;
-    color:white;
-    font-size: 1rem;
-    width: 50%;
-    text-align: center;
+    width: 40%;
     float: left;
 }
-.box-in-image{
-    display: block;
-    float: left;
-    background: #ccc;
-    margin-top: 0.5%;
-    margin-left: 0.5%;
-    padding:0.3%;
-}
-.box-in-image .btn{
+.meetup-img img{
     width: 100%;
-    margin-top: 10px;
-    padding: 1rem 0rem;
+    min-height: 300px;
+    
 }
-#attending-number{
-    padding: 10px;
-    color: black;
-}
-.attending{
-    color: black;
-}
+
 .meetup-details{
-    width: 49%;
+    width: 59%;
     float: left;
     padding-left: 1%;
     background: white;
     min-height: 300px;
 }
-.click-to-ask .btn, .click-to-delete .btn{
-    margin:2rem 40% 0;
-    text-align: center;
+.meetup-topic {
+    padding-top: 10px;
 }
-.click-to-ask a, .click-to-delete .btn a{
-    color: white;
+#meetup-section {
+    padding-bottom: 10px;
+}.question-section .heading-title{
+    padding: 0;
+    padding-left: 20px;
+}
+.rsvp-ask{
+    width: 100%;
+   text-align: center;
 }
 
+.click-to-ask .btn, .click-to-delete .btn{
+    margin:2rem 40% 0;
+}
+.rsvp-ask a, .click-to-delete .btn a{
+    color: white;
+}
+textarea{
+    resize: none;
+}
+
+h1
 header h3{
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
 .small-pic img{
-    width: 70px;
-    height: 70px;
-    padding-left: 0.5rem;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
     float: left;
-    padding-right: 20px;
 }
 
 .pic-question-and-comment{
@@ -314,6 +351,7 @@ header h3{
     margin: auto;
     border-bottom: 1px solid #ccc;
     padding-bottom: 1.5rem;
+    padding-top: 15px;
 }
 
 .vote{
@@ -338,20 +376,31 @@ header h3{
     padding: 3px;
 }
 
-.question{
+.m-question{
     margin-bottom: 15px;
+    margin-left: 85px;
+    margin-top: 10px;
+}
+.comment-content{
+    margin-left: 65px;
+}
+.question-title h3{
+    margin-left: 82px;
+}
+.comments h3{
+    margin-left: 85px;
 }
 .upvote{
     float: left; 
 }
 .tiny-pic img{
     width: 50px;
-    width: 50px;
-    padding-left: 0.5rem;
+    height: 50px;
+    border-radius: 50%;
     float: left;
-    padding-right: 20px;
 }
 #view-comments .container{
+    max-width: 100%;
     padding-top: 10px;
     padding-left: 90px;
     border: none;  
@@ -402,26 +451,19 @@ section #profile-head{
     margin-bottom: 10px;
 }
 
-.division h3{
-    border: none;
-}
+
 .division{
-    width: 100%;
-    border: 1px solid #ccc;
+    width: 80%;
+    margin: auto;
     text-align: center;
-    padding: 0;
+    padding: 10px;;
 }
 .division .heading-title{
         font-size: 1rem;
         padding: 0.5rem;
         font-weight: bold;
+        margin-top: 40px;
         
-}
-.division .top-topic{
-    border: none;
-}
-.top-topic{
-    padding-top: 20px;
 }
 
 .top-topic .upvote{
@@ -432,10 +474,15 @@ section #profile-head{
 }
 
 .top-topic .question{
-    width: 50%;
-    padding-right: 20px;
+    width: 60%;
+    padding-right: 10px;
     float: left;
     text-align: left;
+}
+
+#pix-details {
+    width: 85%;
+    margin: auto;
 }
 
 .container-profile{
@@ -447,9 +494,18 @@ section #profile-head{
     float: left;
     min-height: 200px;
 }
+.profile-pix img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.profile-pix img:hover{
+    opacity: 0.3;
+}
 .profile-details{
-    width: 79%;
-    padding-left: 1%;
+    width: 77%;
+    padding-left: 5%;
     float: left;   
 }
 .about-label, .name-label{
@@ -462,16 +518,10 @@ section #profile-head{
     float: left;
     margin-right: 20px;
 }
-.change-pix{
-clear: both;
-}
-.change-pix, .reset-pass, .container-about{
+
+.container-about{
     padding-top: 15px;
 }
-.update{
-    margin-top: 10px;
-}
-
 .delete h4{
     float: left;
 }
@@ -482,4 +532,20 @@ clear: both;
 .upvotes-number{
     margin-left: 15px;
     font-weight: bold;
+}
+#summary-section, #summary-section-comment, #summary-section-upcoming{
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.top-topic .question p {
+    margin-top: 0;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+.top-topic h3{
+    padding-bottom: 20px;
+    color: rgb(161, 24, 24);
+    text-align: center;
 }

@@ -17,11 +17,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="new-meetup.html">New meetup</a></li>
-                    <li><a href="index.html#meetup">Meetup</a></li>
                     <li class="current"><a href="login.html">Log in</a></li>
-                    <li><a href="sign-up.html">Sign up</a></li>
-                    <li><a href="profile.html">Hi, Guest</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,19 +25,21 @@
 
     <!-- Main area -->
     <main>
-       <section>
-           <div class="border">
-                <h1>Login</h1>
-                <p>Not registered with us yet? <a href="sign-up.html">Sign up</a></p> 
+       <section class="padding-bot">
+           <div>
+                <h1 class= "heading-title-login">Login</h1>
+                <p class="heading-description-login"> Not registered with us yet? <a href="sign-up.html">Sign up</a></p>
+            </div>
+                <div class="border"> 
                     <form class="login">
                         <div>
                             <label>Email address:</label><br>
                             <input type="email", placeholder="Email Address">
                         </div>
                         <div>
-                            <label>Password:</label><br>
-                            <a href="forgot-password.html"><p id="forgot-password-ptag">Forgot your password?</p></a>
+                            <label> <p id="password-label">Password: </p></label>
                             <input type="password", type="password">
+                            <a href="forgot-password.html"><p id="forgot-password-ptag">Forgot your password?</p></a>
                         </div>
                     <button class="btn">Login</button>
                 </form>

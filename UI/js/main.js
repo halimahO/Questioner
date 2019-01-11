@@ -29,12 +29,12 @@ const upvote = () => {
   const upImage = document.getElementById('upvote-img');
   const allVotes = document.getElementById('upvotes-number').innerHTML;
   if (upImage.className === 'not-clicked') {
-    upImage.src = '/img/upvote.png';
+    upImage.src = './img/upvote.png';
     upImage.className = 'clicked';
     const upVote = parseInt(allVotes) + 1;
     document.getElementById('upvotes-number').innerHTML = upVote;
   } else {
-    upImage.src = '/img/upvote-gray.jpg';
+    upImage.src = './img/upvote-gray.jpg';
     upImage.className = 'not-clicked';
     const upVote = parseInt(allVotes) - 1;
     document.getElementById('upvotes-number').innerHTML = upVote;
@@ -46,12 +46,12 @@ const downvote = () => {
   const downImage = document.getElementById('downvote-img');
   const allVotes = document.getElementById('downvotes-number').innerHTML;
   if (downImage.className === 'not-clicked') {
-    downImage.src = '/img/downvote.png';
+    downImage.src = './img/downvote.png';
     downImage.className = 'clicked';
     const downVote = parseInt(allVotes) + 1;
     document.getElementById('downvotes-number').innerHTML = downVote;
   } else {
-    downImage.src = '/img/downvote-gray.jpg';
+    downImage.src = './img/downvote-gray.jpg';
     downImage.className = 'not-clicked';
     const downVote = parseInt(allVotes) - 1;
     document.getElementById('downvotes-number').innerHTML = downVote;

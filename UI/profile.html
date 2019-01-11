@@ -17,8 +17,6 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="new-meetup.html">New meetup</a></li>
-                    <li><a href="index.html#meetup">Meetup</a></li>
                     <li class="current"><a href="profile.html">Hi, User</a></li>
                 </ul>
             </nav>
@@ -33,15 +31,20 @@
                 <h1>Profile</h1>
             </div>
         </div>
-        <div class="container-profile">
-            <div class="container">
+        <div  class="container-profile">
+            <div id ="pix-details" class="container">
                 <div class="profile-picture">
                     <div class="profile-pix"><img src="img/halimah.jpg" alt="Halimah"></div>
                 </div>
                 <div class="profile-details">
-                    <div class="container">
-                        <div class="name-label">Display name:</div>
+                    <div  class="container">
+                        <div class="name-label">Firstname:</div>
                         <div class="name">Halimah</div>
+                        <div class="edit"> <a href="#name"> edit</a></div>
+                    </div>
+                    <div class="container-about">
+                        <div class="name-label">Lastname:</div>
+                        <div class="name">Oladosu</div>
                         <div class="edit"> <a href="#name"> edit</a></div>
                     </div>
                     <div class="container-about">
@@ -49,44 +52,151 @@
                         <div class="about">I am a software developer. Sometimes I find coding frustrating, especially when I've been on a seemingly easy task for hours. But the joy of developing a beautiful and useful app erases all the traces of frustration and glue me to my laptop for hours more.</div>
                         <div class="edit"> <a href="#about-me"> edit</a></div>
                     </div>
-                    <div class="change-pix"> <a href="">Change profile picture</a> </div>
-                    <div class="reset-pass"> <a href="password-reset.html">Reset password</a> </div>
-                    <div class="update"><button class="update">Update</button></div>
-                </div>
+                    </div>
                 
             </div>
-            <section>
+            <section class="padding-bot">
                 <div class="division">
                     <header class="heading-title">
-                        <h2><span id="question-number">1 </span>Questions posted</h2>
-                        <p><a href="all-questions-posted.html">view all</a></p> 
-                    </header>
-                </div>
-            </section>
-            <section>
-                <div class="division">
-                    <header class="heading-title">
-                        <h2><span id="commented-on-number">1 </span>Questions commented on</h2>
-                        <p><a href="all-questions-commented-on.html">view all</a></p> 
-                    </header>
-                </div>
-            </section>
-            <section>
-                <div class="division">
-                    <div class="container">
-                    <header class="heading-title">
-                        <h2> Top questions for upcoming meetups</h2>
-                    </header>
-                    <div class="top-topic">
-                        <div class="upvote">
-                            <div class="upvote-img"><img src="/img/upvote.png" alt="upvote"></div>   
-                            <div class="upvotes-number" >2</div> 
+                        <h2>Questions posted: <span id="question-number">3 </span></h2></header>
+                        <section id ="summary-section">
+                                <div class="container">
+                                        <div class="top-topic">
+                                            <div class="upvote">
+                                                <div class="upvote-img"><h3>Upvotes</h3></div>   
+                                            </div>
+                                            <div class="question"><h3>Questions</h3></div>
+                                            <div class="meetup-topic-summary"><h3>Meetups</h3></div>
+                                        </div>
+                                    </div>
+                                <div class="container">
+                                    <div class="top-topic">
+                                        <div class="upvote">
+                                            <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                            <div class="upvotes-number" >2</div> 
+                                        </div>
+                                        <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corporis fuga saepe pariatur?</p></div>
+                                        <div class="meetup-topic-summary">Aspiring Andelans</div>
+                                    </div>
+                                </div>
+                                    <div class="container">
+                                        <div class="top-topic">
+                                            <div class="upvote">
+                                                <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                <div class="upvotes-number" >2</div> 
+                                            </div>
+                                            <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus pariatur nemo iusto!</p></div>
+                                            <div class="meetup-topic">Aspiring Andelans</div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="top-topic">
+                                            <div class="upvote">
+                                                <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                <div class="upvotes-number" >2</div> 
+                                            </div>
+                                            <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores exercitationem totam consequuntur cum.</p></div>
+                                            <div class="meetup-topic">Aspiring Andelans</div>
+                                        </div>
+                                    </div>
+                                    <a href="all-questions-commented-on.html">view more</a>
+                                </section>
                         </div>
-                        <div class="question">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eius, vitae quo ipsa iure placeat?</div>
-                        <div class="meetup-topic">Good food lovers</div>
-                    </div>
-                </div>
-                </div>
+
+
+                        <div class="division">
+                            <header class="heading-title">
+                                <h2>Questions commented on: <span id="question-number">3 </span></h2></header>
+                                <section id ="summary-section-comment">
+                                        <div class="container">
+                                                <div class="top-topic">
+                                                    <div class="upvote">
+                                                        <div class="upvote-img"><h3>Upvotes</h3></div>   
+                                                    </div>
+                                                    <div class="question"><h3>Questions</h3></div>
+                                                    <div class="meetup-topic-summary"><h3>Meetups</h3></div>
+                                                </div>
+                                            </div>
+                                        <div class="container">
+                                            <div class="top-topic">
+                                                <div class="upvote">
+                                                    <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                    <div class="upvotes-number" >2</div> 
+                                                </div>
+                                                <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corporis fuga saepe pariatur?</p></div>
+                                                <div class="meetup-topic-summary">Aspiring Andelans</div>
+                                            </div>
+                                        </div>
+                                            <div class="container">
+                                                <div class="top-topic">
+                                                    <div class="upvote">
+                                                        <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                        <div class="upvotes-number" >2</div> 
+                                                    </div>
+                                                    <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus pariatur nemo iusto!</p></div>
+                                                    <div class="meetup-topic">Aspiring Andelans</div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="top-topic">
+                                                    <div class="upvote">
+                                                        <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                        <div class="upvotes-number" >2</div> 
+                                                    </div>
+                                                    <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores exercitationem totam consequuntur cum.</p></div>
+                                                    <div class="meetup-topic">Aspiring Andelans</div>
+                                                </div>
+                                            </div>
+                                            <a href="all-questions-commented-on.html">view more</a>
+                                        </section>
+                                </div>
+
+                                <div class="division">
+                                    <header class="heading-title">
+                                        <h2>Top questions for upcoming meetups</h2></header>
+                                        <section id ="summary-section-upcoming">
+                                                <div class="container">
+                                                        <div class="top-topic">
+                                                            <div class="upvote">
+                                                                <div class="upvote-img"><h3>Upvotes</h3></div>   
+                                                            </div>
+                                                            <div class="question"><h3>Questions</h3></div>
+                                                            <div class="meetup-topic-summary"><h3>Meetups</h3></div>
+                                                        </div>
+                                                    </div>
+                                                <div class="container">
+                                                    <div class="top-topic">
+                                                        <div class="upvote">
+                                                            <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                            <div class="upvotes-number" >2</div> 
+                                                        </div>
+                                                        <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corporis fuga saepe pariatur?</p></div>
+                                                        <div class="meetup-topic-summary">Aspiring Andelans</div>
+                                                    </div>
+                                                </div>
+                                                    <div class="container">
+                                                        <div class="top-topic">
+                                                            <div class="upvote">
+                                                                <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                                <div class="upvotes-number" >2</div> 
+                                                            </div>
+                                                            <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus pariatur nemo iusto!</p></div>
+                                                            <div class="meetup-topic">Aspiring Andelans</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="container">
+                                                        <div class="top-topic">
+                                                            <div class="upvote">
+                                                                <div class="upvote-img"><img src="./img/upvote.png" alt="upvote"></div>   
+                                                                <div class="upvotes-number" >2</div> 
+                                                            </div>
+                                                            <div class="question"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores exercitationem totam consequuntur cum.</p></div>
+                                                            <div class="meetup-topic">Aspiring Andelans</div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="all-questions-commented-on.html">view more</a>
+                                                </section>
+                                        </div>
             </section>
         </div>
     </main>

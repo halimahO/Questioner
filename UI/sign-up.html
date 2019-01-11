@@ -17,8 +17,6 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#meetup">Meetup</a></li>
-                    <li><a href="login.html">Log in</a></li>
                     <li class="current"><a href="sign-up.html">Sign up</a></li>
                 </ul>
             </nav>
@@ -27,14 +25,20 @@
 
     <!-- Main area -->
     <main>
-       <section>
-           <div class="border">
-                <h1>Sign Up</h1>
-                <p>Already a member? <a href="login.html">Login</a></p>
-                <form class="sign-up">
+       <section class="padding-bot">
+            <div>
+                <h1 class= "sign-up-heading-title">Sign Up</h1>
+                <p class="sign-up-heading-description">Already a member? <a href="login.html">Login</a></p>
+            </div>
+            <div class="border">
+                        <form class="sign-up">
                     <div>
-                        <label>Display name:</label><br>
-                        <input type="text", placeholder="Name">
+                        <label>Firstname:</label><br>
+                        <input type="text", placeholder="Firstname">
+                    </div>
+                    <div>
+                        <label>Lastname:</label><br>
+                        <input type="text", placeholder="Lastname">
                     </div>
                     <div>
                             <label>Email address:</label><br>

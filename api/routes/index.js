@@ -5,6 +5,8 @@ import rsvp from '../controllers/rsvp';
 
 const routes = Router();
 
+routes.get('/', () => ('Welcome, please use /api/v1/meetups to get meetups'));
+routes.get('/api/v1', () => ('Welcome, please use /api/v1/meetups to get meetups'));
 routes.post('/api/v1/meetups', meetup.createMeetup);
 routes.get('/api/v1/meetups/upcoming', meetup.getUpcoming);
 routes.get('/api/v1/meetups/:id', meetup.getOneMeetup);
