@@ -5,7 +5,6 @@ class Question {
     this.questions = [];
   }
 
-  // Model for create a question
   createQuestion(data) {
     const newId = (array) => {
       if (array.length > 0) {
@@ -14,12 +13,12 @@ class Question {
       return 1;
     };
     const newQuestion = {
-      id: Number(newId(this.questions)),
+      id: newId(this.questions),
       createdOn: moment().format('LLLL'),
       createdBy: 'userId',
       meetup: 'meetupId',
-      title: String(data.title),
-      body: String(data.body),
+      title: data.title,
+      body: data.body,
       votes: Number(0),
     };
     this.questions.push(newQuestion);
@@ -31,7 +30,6 @@ class Question {
     return this.questions.find(data => data.id == id);
   }
 
-  // Model for upvote a question
   upvote(id) {
     const question = this.fetchOneQuestion(id);
     const index = this.questions.indexOf(question);
@@ -39,7 +37,6 @@ class Question {
     return this.questions[index];
   }
 
-  // Model for downvote a question
   downvote(id) {
     const question = this.fetchOneQuestion(id);
     const index = this.questions.indexOf(question);

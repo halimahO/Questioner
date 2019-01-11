@@ -1,6 +1,5 @@
 import questionModel from '../models/question';
 
-// Controller for create a question
 const Question = {
   createQuestion(req, res) {
     if (!req.body.title || !req.body.body) {
@@ -21,7 +20,6 @@ const Question = {
     });
   },
 
-  // Controller for upvote a question
   upvote(req, res) {
     const question = questionModel.fetchOneQuestion(req.params.id);
     if (!question) {
@@ -42,7 +40,6 @@ const Question = {
     });
   },
 
-  // Controller for downvote a question
   downvote(req, res) {
     const question = questionModel.fetchOneQuestion(req.params.id);
     if (!question) {
