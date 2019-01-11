@@ -3,7 +3,6 @@ class Rsvp {
     this.rsvp = [];
   }
 
-  // Model for a respond to meetup rsvp
   respondToRsvp(data) {
     const newId = (array) => {
       if (array.length > 0) {
@@ -12,11 +11,11 @@ class Rsvp {
       return 1;
     };
     const newRSVP = {
-      id: Number(newId(this.rsvp)),
+      id: newId(this.rsvp),
       meetup: 1,
       user: 1,
       topic: 'Meetup topic',
-      response: String(data.response),
+      response: data.response,
     };
     this.rsvp.push(newRSVP);
     return newRSVP;

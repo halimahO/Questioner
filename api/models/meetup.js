@@ -5,7 +5,6 @@ class Meetup {
     this.meetups = [];
   }
 
-  // Model for create a meetup record
   createMeetup(data) {
     const newId = (array) => {
       if (array.length > 0) {
@@ -14,11 +13,11 @@ class Meetup {
       return 1;
     };
     const newMeetup = {
-      id: Number(newId(this.meetups)),
+      id: newId(this.meetups),
       createdOn: moment().format('LLLL'),
-      location: String(data.location),
+      location: data.location,
       images: data.images,
-      topic: String(data.topic),
+      topic: data.topic,
       happeningOn: moment(data.happeningOn).format('LLLL'),
       tags: [data.tags],
     };
@@ -26,18 +25,15 @@ class Meetup {
     return newMeetup;
   }
 
-  // Model for fetch a specific meetup record
   fetchOneMeetup(id) {
     // eslint-disable-next-line eqeqeq
     return this.meetups.find(data => data.id == id);
   }
 
-  // Model for fetch all meetup records
   fetchAllMeetup() {
     return this.meetups;
   }
 
-  // Model for fetch all upcoming meetup records
   getUpcoming() {
     return this.meetups.filter(data => data.happeningOn >= moment().format('LLLL'));
   }

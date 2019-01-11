@@ -1,7 +1,6 @@
 import rsvpModel from '../models/rsvp';
 import meetupModel from '../models/meetup';
 
-// Controller for respond to meetup rsvp
 const RSVP = {
   respondToRsvp(req, res) {
     const meetupId = meetupModel.fetchOneMeetup(req.params.id);

@@ -1,7 +1,6 @@
 import moment from 'moment';
 import meetupModel from '../models/meetup';
 
-// Controller for create a meetup record
 const Meetup = {
   createMeetup(req, res) {
     if (!req.body.location || !req.body.topic || !req.body.happeningOn) {
@@ -25,7 +24,7 @@ const Meetup = {
       }],
     });
   },
-  // Controller for fetch a specific meetup record
+
   getOneMeetup(req, res) {
     const meetup = meetupModel.fetchOneMeetup(req.params.id);
     if (!meetup) {
@@ -44,7 +43,6 @@ const Meetup = {
       }],
     });
   },
-  // Controller for fetch all meetup records
   getAllMeetup(req, res) {
     const meetup = meetupModel.fetchAllMeetup();
     return res.status(200).send({
