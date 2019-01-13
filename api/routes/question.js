@@ -1,8 +1,13 @@
 import { Router } from 'express';
-import question from '../controllers/question';
+import questio from '../controllers/question';
+import validator from '../validator/question';
 
 const routes = Router();
 
-routes.post('/api/v1/questions', question.createQuestion);
-routes.patch('/api/v1/questions/:id/upvote', question.upvote);
-routes.patch('/api/v1/questions/:id/downvote', question.downvote);
+routes.post('/', validator, questio.createQuestion);
+routes.get('/', questio.getAllQuestion);
+routes.get('/:id', questio.getOneQuestion);
+routes.patch('/:id/upvote', questio.upvote);
+routes.patch('/:id/downvote', questio.downvote);
+
+export default routes;

@@ -3,6 +3,6 @@ import rsvp from '../controllers/rsvp';
 
 const routes = Router();
 
-routes.post('/', rsvp.respondToRsvp);
+routes.post('/', rsvp.createRsvp);
 
 export default routes;

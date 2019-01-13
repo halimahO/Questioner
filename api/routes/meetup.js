@@ -1,14 +1,13 @@
 import { Router } from 'express';
 import meetup from '../controllers/meetup';
+import validator from '../validator/meetup';
 
 const routes = Router();
-const {
-  createMeetup, getAllMeetup, getOneMeetup, getUpcoming,
-} = meetup;
 
-routes.post('/', createMeetup);
-routes.get('/upcoming', getUpcoming);
-routes.get('/:id', getOneMeetup);
-routes.get('/', getAllMeetup);
+routes.post('/', validator, meetup.createMeetup);
+routes.get('/upcoming', meetup.getUpcoming);
+routes.get('/:id', meetup.getOneMeetup);
+routes.get('/', meetup.getAllMeetup);
+routes.post('/:id/rsvps', meetup.createRsvp);
 
 export default routes;
