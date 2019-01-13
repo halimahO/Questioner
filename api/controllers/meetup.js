@@ -1,57 +1,63 @@
 import moment from 'moment';
-import meetupModel from '../models/meetup';
+import { validationResult } from 'express-validator/check';
+import MeetupModel from '../models/meetup';
+
+const meetups = [];
+const rsvps = [];
 
 const Meetup = {
+
+
   createMeetup(req, res) {
-    if (!req.body.location || !req.body.topic || !req.body.happeningOn) {
+    const meetup = new MeetupModel(req.body);
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
       return res.status(400).send({
-        message: 'The fields location, topic and happeningOn are required',
+        status: 400,
+        errors: errors.array(),
       });
     }
-    if (!(moment(req.body.happeningOn).isValid())) {
+    if (!(moment(meetup.happeningOn).isValid())) {
       return res.status(400).send({
         message: 'Please use this format: "Friday, January 4, 2019 9:53 PM"',
       });
     }
-    const meetup = meetupModel.createMeetup(req.body);
-    return res.status(201).send({
+    meetup.id = meetups.length + 1;
+    meetups.push(meetup);
+    return res.status(200).send({
       status: 201,
-      data: [{
-        topic: meetup.topic,
-        location: meetup.location,
-        happeningOn: meetup.happeningOn,
-        tags: meetup.tags,
-      }],
+      data: [meetup],
     });
   },
 
   getOneMeetup(req, res) {
-    const meetup = meetupModel.fetchOneMeetup(req.params.id);
-    if (!meetup) {
+    const getMeetup = meetups.find(meetup => meetup.id === parseInt(req.params.id, 10));
+    if (!getMeetup) {
       return res.status(404).send({
         message: 'Meetup not found',
       });
     }
-    return res.status(200).send({
+    return res.status(201).send({
       status: 200,
       data: [{
-        id: meetup.id,
-        topic: meetup.topic,
-        location: meetup.location,
-        happeningOn: meetup.happeningOn,
-        tags: meetup.tags,
+        id: getMeetup.id,
+        topic: getMeetup.topic,
+        location: getMeetup.location,
+        happeningOn: getMeetup.happeningOn,
+        tags: getMeetup.tags,
       }],
     });
   },
+
   getAllMeetup(req, res) {
-    const meetup = meetupModel.fetchAllMeetup();
     return res.status(200).send({
       status: 200,
-      data: meetup,
+      data: meetups,
     });
   },
+
   getUpcoming(req, res) {
-    const upcoming = meetupModel.getUpcoming();
+    const upcoming = meetups.filter(meetup => meetup.happeningOn <= moment().format('LLLL'));
     if (upcoming.length === 0 || upcoming === undefined) {
       return res.status(404).send({
         message: 'No upcoming meetup',
@@ -62,6 +68,25 @@ const Meetup = {
       data: upcoming,
     });
   },
-};
 
+  createRsvp(req, res) {
+    const rsvp = req.body;
+    if (!rsvp.status) {
+      return res.status(400).send({
+        message: 'status required',
+      });
+    }
+    rsvp.id = rsvps.length + 1;
+    rsvp.meetupId = req.params.id;
+    rsvps.push(rsvp);
+    return res.status(201).send({
+      status: 201,
+      data: {
+        id: rsvp.id,
+        meetup: rsvp.meetupId,
+        status: rsvp.status,
+      },
+    });
+  },
+};
 export default Meetup;

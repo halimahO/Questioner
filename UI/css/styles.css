@@ -550,3 +550,12 @@ section #profile-head{
     color: rgb(161, 24, 24);
     text-align: center;
 }
+/* Media queries */
+@media(max-width: 700px){
+    .profile-picture{
+        text-align: -webkit-center;
+        width: 100%;
+    }  
+    .division {
+        width: 100%;
+}}
