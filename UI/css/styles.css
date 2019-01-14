@@ -495,8 +495,8 @@ section #profile-head{
     min-height: 200px;
 }
 .profile-pix img{
-    width:150px;
-    height: 150px;
+    max-width:150px;
+    max-height: 150px;
     border-radius: 50%;
 
 }
@@ -512,6 +512,7 @@ section #profile-head{
     display: block;
     width: 13%;
     float: left;
+    padding-right: 10px;
 }
 .about, .name{
     width: 75%;
@@ -549,3 +550,12 @@ section #profile-head{
     color: rgb(161, 24, 24);
     text-align: center;
 }
+/* Media queries */
+@media(max-width: 700px){
+    .profile-picture{
+        text-align: -webkit-center;
+        width: 100%;
+    }  
+    .division {
+        width: 100%;
+}}

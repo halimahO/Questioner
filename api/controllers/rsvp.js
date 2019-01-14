@@ -1,10 +1,11 @@
-import rsvpModel from '../models/rsvp';
-import meetupModel from '../models/meetup';
+import RsvpModel from '../models/rsvp';
+import meetupController from './meetup';
 
-// Controller for respond to meetup rsvp
-const RSVP = {
-  respondToRsvp(req, res) {
-    const meetupId = meetupModel.fetchOneMeetup(req.params.id);
+const rsvps = [];
+
+const Rsvp = {
+  createRsvp(req, res) {
+    const meetupId = meetupController.getOneMeetup(req.params.id);
     if (!meetupId) {
       return res.status(404).send({
         message: 'Cant rsvp for meetup that does not exist',
@@ -16,7 +17,11 @@ const RSVP = {
         message: 'Fill in your status',
       });
     }
-    const rsvp = rsvpModel.respondToRsvp(req.body);
+    const rsvp = new RsvpModel(req.body);
+    rsvp.id = rsvps.length + 1;
+    rsvp.meetup = meetupId.id;
+    rsvp.topic = meetupId.topic;
+    rsvps.push('rsvp');
     return res.status(200).send({
       status: 200,
       data: [{
@@ -30,4 +35,4 @@ const RSVP = {
 
 };
 
-export default RSVP;
+export default Rsvp;

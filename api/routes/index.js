@@ -1,19 +1,16 @@
 import { Router } from 'express';
-import meetup from '../controllers/meetup';
-import question from '../controllers/question';
-import rsvp from '../controllers/rsvp';
+import meetup from './meetup';
+import question from './question';
+// import rsvp from './rsvp';
 
 const routes = Router();
 
-routes.get('/', () => ('Welcome, please use /api/v1/meetups to get meetups'));
-routes.get('/api/v1', () => ('Welcome, please use /api/v1/meetups to get meetups'));
-routes.post('/api/v1/meetups', meetup.createMeetup);
-routes.get('/api/v1/meetups/upcoming', meetup.getUpcoming);
-routes.get('/api/v1/meetups/:id', meetup.getOneMeetup);
-routes.get('/api/v1/meetups', meetup.getAllMeetup);
-routes.post('/api/v1/questions', question.createQuestion);
-routes.patch('/api/v1/questions/:id/upvote', question.upvote);
-routes.patch('/api/v1/questions/:id/downvote', question.downvote);
-routes.post('/api/v1/meetups/:id/rsvps', rsvp.respondToRsvp);
+routes.get('/', (req, res) => res.status(200).send({
+  message: 'WELCOME',
+}));
+
+// routes.use('/meetups/:id/rsvps', rsvp);
+routes.use('/meetups', meetup);
+routes.use('/questions', question);
 
 export default routes;
