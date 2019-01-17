@@ -1,13 +1,11 @@
 import { Router } from 'express';
-import questio from '../controllers/question';
-import validator from '../validator/question';
+import questions from '../controllers/question';
+import validate from '../middleware/validator';
 
 const routes = Router();
 
-routes.post('/', validator, questio.createQuestion);
-routes.get('/', questio.getAllQuestion);
-routes.get('/:id', questio.getOneQuestion);
-routes.patch('/:id/upvote', questio.upvote);
-routes.patch('/:id/downvote', questio.downvote);
+//routes.post('/', validate.params, questions.postQuestion);
+routes.patch('/:id/upvote', questions.upvote);
+routes.patch('/:id/downvote', questions.downvote);
 
 export default routes;
