@@ -2,9 +2,7 @@ import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../../server';
 
-const { describe, it } = require('mocha');
-
-console.log(process.env.NODE_ENV);
+const { describe, it, expect } = require('mocha');
 
 chai.use(chaiHttp);
 chai.should();
@@ -12,15 +10,17 @@ chai.should();
 describe('Test for meetup resource', () => {
   describe('POST /meetups', () => {
     it('should create a meetup record', (done) => {
+      const newMeetup = {
+        location: '2, Awolowo way, Ikoyi',
+        images: 'sample-image1',
+        topic: 'How to be a better developer',
+        happeningOn: '2019/1/1',
+        tags: 'tag2',
+      };
+
       chai.request(app)
         .post('/api/v1/meetups')
-        .send({
-          location: '2, Awolowo way, Ikoyi',
-          images: 'sample-image1',
-          topic: 'How to be a better developer',
-          happeningOn: '2019/1/1',
-          tags: 'tag2',
-        })
+        .send(newMeetup)
         .end((err, res) => {
           res.should.have.status(201);
           res.body.should.be.a('object');
