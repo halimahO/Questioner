@@ -5,7 +5,7 @@ Questioner helps the meetup organizer prioritize questions to be answered. Other
 ## Badges
 
 [![Build Status](https://travis-ci.org/halimahO/Questioner.svg?branch=api%2Fv1)](https://travis-ci.org/halimahO/Questioner)
-[![Coverage Status](https://coveralls.io/repos/github/halimahO/Questioner/badge.svg?branch=api)](https://coveralls.io/github/halimahO/Questioner?branch=api)
+[![Coverage Status](https://coveralls.io/repos/github/halimahO/Questioner/badge.svg?branch=ch-create-test-for-api-endpoints)](https://coveralls.io/github/halimahO/Questioner?branch=ch-create-test-for-api-endpoints)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
 
