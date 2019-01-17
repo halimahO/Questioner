@@ -11,10 +11,10 @@ const validateMeetupInput = (req, res, next) => {
       message: 'location must be a string',
     });
   }
-  if (!String(happeningOn)) {
+  if (!happeningOn) {
     return res.status(400).json({
       success: false,
-      message: 'happening_on must be a string',
+      message: 'happening_on is required',
     });
   }
   if (!topic) {
@@ -97,7 +97,7 @@ const validateUpvote = (req, res, next) => {
   if (String(reqId)) {
     return res.status(400).json({
       success: false,
-      message: 'The downvote id must be a number',
+      message: 'The upvote id must be a number',
     });
   }
   return next();
