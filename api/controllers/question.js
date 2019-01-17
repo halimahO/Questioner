@@ -19,13 +19,13 @@ const upvote = (request, response) => {
   const id = parseInt(request.params.id, 10);
   const { upvotes } = request.body;
   db.query(
-    'UPDATE users SET name = $1 + 1, WHERE id = $2',
+    'UPDATE questions SET upvotes = $1 + 1 WHERE id = $2',
     [upvotes, id],
     (error, results) => {
       if (error) {
         throw error;
       }
-      response.status(200).json(results.rows);
+      response.status(404).json(results.rows);
     },
   );
 };
@@ -34,7 +34,7 @@ const downvote = (request, response) => {
   const id = parseInt(request.params.id, 10);
   const { downvotes } = request.body;
   db.query(
-    'UPDATE users SET name = $1 - 1, WHERE id = $2',
+    'UPDATE questions SET downvotes = $1 WHERE id = $2',
     [downvotes, id],
     (error, results) => {
       if (error) {

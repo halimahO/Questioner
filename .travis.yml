@@ -1,6 +1,20 @@
 language: node_js
-node_js: 
+node_js:
   - "stable"
-
+cache:
+  directories:
+    - "node_modules"
+services:
+  - postgresql
+env:
+  global:
+    - PGPORT=5432
+before_script:
+  - npm install
+  - npm run build
+  - psql -c 'create database questionerdb;' -U postgres
+  - npm run travis-db
+script:
+  - npm test
 after_success:
- - npm run coverage
+  - npm run coverage

@@ -63,12 +63,11 @@ const Meetup = {
       req.body.happeningOn,
       req.body.tags,
     ];
-
     try {
       const { rows } = await db.query(text, values);
       return res.status(201).send({
         status: 200,
-        message: rows,
+        message: rows[0],
       });
     } catch (error) {
       return res.status(400).send({ message: 'Invalid date type, please use the format yyyy/mm/dd' });
