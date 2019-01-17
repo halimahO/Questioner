@@ -4,24 +4,37 @@ import app from '../../server';
 
 const { describe, it } = require('mocha');
 
+console.log(process.env.NODE_ENV);
+
 chai.use(chaiHttp);
 chai.should();
 
 describe('Test for meetup resource', () => {
   describe('POST /meetups', () => {
-    it('should create an meetup record', (done) => {
+    it('should create a meetup record', (done) => {
       chai.request(app)
         .post('/api/v1/meetups')
         .send({
           location: '2, Awolowo way, Ikoyi',
-          images: ['sample-image1', 'sample-image2'],
+          images: 'sample-image1',
           topic: 'How to be a better developer',
-          happeningOn: 'Wednesday, January 9, 2019 3:19 PM',
-          tags: ['tag1', 'tag2'],
+          happeningOn: '2019/1/1',
+          tags: 'tag2',
         })
         .end((err, res) => {
           res.should.have.status(201);
           res.body.should.be.a('object');
+          done();
+        });
+    });
+  });
+
+  describe('GET /meetups/<meetup-id>', () => {
+    it('should fetch a meetup that exist', (done) => {
+      chai.request(app)
+        .get('/api/v1/meetups/1')
+        .end((err, res) => {
+          res.should.have.status(200);
           done();
         });
     });
@@ -54,7 +67,7 @@ describe('Test for meetup resource', () => {
   describe('GET /meetups/upcoming/', () => {
     it('should fetch all upcoming meetup records', (done) => {
       chai.request(app)
-        .get('/api/v1/meetups/upcoming')
+        .get('/api/v1/meetups/upcoming/')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');

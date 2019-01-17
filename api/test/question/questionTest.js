@@ -10,7 +10,7 @@ chai.should();
 describe('Test for question resource', () => {
   describe('POST /questions', () => {
     it('should not create a question for a meetup that does not exist', (done) => {
-      const id = 5;
+      const id = 35;
       chai.request(app)
         .post(`/${id}`)
         .end((err, res) => {
