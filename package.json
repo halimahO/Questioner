@@ -9,10 +9,11 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./api -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/server.js",
+    "start": "npm run build && npm run heroku-db && node ./build/server.js",
     "dev-start": "babel-watch ./api/server.js",
     "db": "babel-node ./api/db.js",
-    "travis-db": "babel-node ./travis-db.js"
+    "heroku-db": "babel-node ./heroku-db.js",
+    "travis-db": "babel-node ./heroku-db.js"
   },
   "author": "Halimah Oladosu",
   "license": "ISC",

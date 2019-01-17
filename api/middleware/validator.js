@@ -1,47 +1,28 @@
 
 const validateMeetupInput = (req, res, next) => {
   const { topic, location, happeningOn } = req.body;
-  if (!String(topic)) {
+  if (!topic || !location || !happeningOn) {
     return res.status(400).json({
-      message: 'topic must be a string',
+      status: res.statusCode,
+      message: 'topic, location and happeningOn fields are required',
     });
   }
+
   if (!String(location)) {
     return res.status(400).json({
-      message: 'location must be a string',
+      success: false,
+      message: 'Location must be a string',
     });
   }
-  if (!happeningOn) {
+  if (!String(topic)) {
     return res.status(400).json({
       success: false,
-      message: 'happening_on is required',
-    });
-  }
-  if (!topic) {
-    return res.status(400).json({
-      success: false,
-      message: ' Topic is required',
-    });
-  }
-  if (!location) {
-    return res.status(400).json({
-      success: false,
-      message: ' location is required',
+      message: 'Topic must be a string',
     });
   }
   return next();
 };
 
-const validateParamId = (req, res, next) => {
-  const reqId = Number(req.params.id);
-  if (typeof reqId === 'string') {
-    return res.status(403).json({
-      status: 403,
-      message: 'Id must be a number',
-    });
-  }
-  return next();
-};
 
 const validateRsvp = (req, res, next) => {
   const { status } = req.body;
@@ -116,7 +97,6 @@ const validatedownvote = (req, res, next) => {
 
 const validate = {
   validateMeetupInput,
-  validateParamId,
   validateRsvp,
   validateQuestionInput,
   validateUpvote,

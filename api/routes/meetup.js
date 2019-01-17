@@ -6,7 +6,7 @@ const routes = Router();
 
 routes.get('/', meetups.getAllMeetups);
 routes.get('/upcoming', meetups.getUpcoming);
-routes.get('/:id', validate.validateParamId, meetups.getOneMeetup);
+routes.get('/:id', meetups.getOneMeetup);
 routes.post('/:id/rsvps', meetups.createRsvps);
 routes.post('/', validate.validateMeetupInput, meetups.createMeetup);
 
