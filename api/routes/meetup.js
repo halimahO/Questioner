@@ -7,4 +7,7 @@ const routes = Router();
 
 routes.get('/', meetups.getAllMeetups);
 
+routes.get('/:id', validate.validateParamId, meetups.getOneMeetup);
+
+
 export default routes;
