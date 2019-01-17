@@ -74,10 +74,5 @@ const Meetup = {
     }
   },
 
-  routes.get('/upcoming', meetups.getUpcoming);
-
-
-
-
 };
 export default Meetup;
