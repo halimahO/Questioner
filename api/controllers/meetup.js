@@ -33,7 +33,7 @@ const Meetup = {
       if (!rows) {
         return res.status(404).send({ message: 'no upcoming meetups' });
       }
-      return res.status(200).send(rows, rowCount);
+      return res.status(200).send({ rows, rowCount });
     } catch (error) {
       return res.status(400).send(error.message);
     }
@@ -48,13 +48,13 @@ const Meetup = {
       req.body.location,
       req.body.images,
       req.body.topic,
-      req.body.happening_on,
+      req.body.happeningn,
       req.body.tags,
     ];
 
     try {
       const { rows } = await db.query(text, values);
-      return res.status(201).send(rows);
+      return res.status(201).send(rows[0]);
     } catch (error) {
       return res.status(400).send({ message: 'please use the format yyyy/mm/dd for happeningOn' });
     }
