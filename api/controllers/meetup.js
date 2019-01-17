@@ -6,7 +6,10 @@ const Meetup = {
     const findAllQuery = 'SELECT * FROM meetups ORDER BY id ASC';
     try {
       const { rows, rowCount } = await db.query(findAllQuery);
-      return res.status(200).send({ rows, rowCount });
+      return res.status(200).send({
+        status: 200,
+        message: rows,
+      });
     } catch (error) {
       return res.status(400).send(error.message);
     }
@@ -17,10 +20,16 @@ const Meetup = {
     const id = parseInt(req.params.id, 10);
     try {
       const { rows } = await db.query(text, [id]);
-      if (!rows[0]) {
-        return res.status(404).send({ message: 'meetup not found' });
+      if (rows.length === 0) {
+        return res.status(404).send({
+          status: 400,
+          message: 'meetup not found',
+        });
       }
-      return res.status(200).send(rows[0]);
+      return res.status(200).send({
+        status: 200,
+        message: rows[0],
+      });
     } catch (error) {
       return res.status(400).send({ message: 'Id must be a number' });
     }
@@ -33,7 +42,10 @@ const Meetup = {
       if (!rows) {
         return res.status(404).send({ message: 'no upcoming meetups' });
       }
-      return res.status(200).send(rows, rowCount);
+      return res.status(200).send({
+        status: 200,
+        message: rows,
+      });
     } catch (error) {
       return res.status(400).send(error.message);
     }
@@ -48,15 +60,18 @@ const Meetup = {
       req.body.location,
       req.body.images,
       req.body.topic,
-      req.body.happening_on,
+      req.body.happeningOn,
       req.body.tags,
     ];
 
     try {
       const { rows } = await db.query(text, values);
-      return res.status(201).send(rows);
+      return res.status(201).send({
+        status: 200,
+        message: rows,
+      });
     } catch (error) {
-      return res.status(400).send({ message: 'please use the format yyyy/mm/dd for happeningOn' });
+      return res.status(400).send({ message: 'Invalid date type, please use the format yyyy/mm/dd' });
     }
   },
 
@@ -68,7 +83,10 @@ const Meetup = {
 
     try {
       const { rows } = await db.query(text, [id]);
-      return res.status(201).send(rows[0]);
+      return res.status(201).send({
+        status: 200,
+        message: rows,
+      });
     } catch (error) {
       return res.status(400).send(error.message);
     }
