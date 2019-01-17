@@ -11,7 +11,7 @@
     "build": "npm run clean && npm run build-babel",
     "start": "npm run build && node ./build/server.js",
     "dev-start": "babel-watch ./api/server.js",
-    "db": "babel-node ./api/db/index.js"
+    "db": "babel-node ./api/db.js"
   },
   "author": "Halimah Oladosu",
   "license": "ISC",
