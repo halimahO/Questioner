@@ -106,7 +106,7 @@ a{
 #showcase{
     min-height: 87vh;
     background: url("../img/woman-raising-hand.jpg") no-repeat;
-    background-size: auto;
+    background-size: cover;
     text-align: center;
     color: black;
 }
@@ -262,6 +262,10 @@ form{
 .border .btn{
     margin-top:20px;
 }
+.write-comment textarea{
+    width: 50%;
+    height: 15vh;
+}
 input, textarea{
     width: 100%;
     padding: 15px 5px;
@@ -289,7 +293,7 @@ input, textarea{
 }
 .meetup-img img{
     width: 100%;
-    min-height: 300px;
+    height: 45vh;
     
 }
 
@@ -298,7 +302,7 @@ input, textarea{
     float: left;
     padding-left: 1%;
     background: white;
-    min-height: 300px;
+    height: 45vh;
 }
 .meetup-topic {
     padding-top: 10px;
@@ -418,6 +422,7 @@ header h3{
 }
 .post-question-area textarea{
     min-height: 100px;
+    width: 65%;
 }
 .show-more-questions{
     text-align: center;
@@ -559,3 +564,50 @@ section #profile-head{
     .division {
         width: 100%;
 }}
+#p1{
+    padding-left: 18px;
+}
+
+#p2{
+    padding-left: 30px;
+}
+
+
+footer {
+  
+}
+
+
+
+
+@media screen and (min-width: 4000px) {
+    footer {
+        padding-top: 100px;
+    }
+    h1 {
+        font-size: 2vw;
+      }
+      h2 {
+        font-size: 3.0vh;
+      }
+      p{
+        font-size: 2vmin;
+      }
+      #showcase h1 {
+        font-size: 70px;
+  }
+  #showcase p {
+    font-size: 30px;
+}
+#homepage-header a {
+    color: white;
+    font-size: 1.3rem;
+}
+#showcase {
+    min-height: 92vh;}
+    .padding-bot, #meetup {
+        padding-bottom: 200px;
+        padding-top: 50px;
+    }
+}
+  
